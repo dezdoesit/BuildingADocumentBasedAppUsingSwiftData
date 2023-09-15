@@ -12,13 +12,13 @@ import SwiftData
 struct SwiftDataFlashCardSample: App {
     var body: some Scene {
         #if os(iOS) || os(macOS)
-        DocumentGroup(editing: Card.self, contentType: .flashCards) {
+        DocumentGroup(editing: .flashCards, migrationPlan: FlashCardsMigrationPlan.self) {
             ContentView()
         }
         #else
         WindowGroup {
             ContentView()
-                .modelContainer(for: Card.self)
+                .modelContainer(previewContainer)
         }
         #endif
     }

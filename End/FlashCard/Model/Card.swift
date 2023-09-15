@@ -21,8 +21,6 @@ final class Card {
     }
 }
 
-extension Card: Identifiable { }
-
 extension Card: Hashable {
     static func == (lhs: Card, rhs: Card) -> Bool {
         lhs.front == rhs.front &&
@@ -35,4 +33,16 @@ extension Card: Hashable {
         hasher.combine(back)
         hasher.combine(creationDate)
     }
+}
+
+// MARK: Migration
+
+struct FlashCardsMigrationPlan: SchemaMigrationPlan {
+    static let schemas: [VersionedSchema.Type] = [FlashCardsVersionedSchema.self]
+    static let stages: [MigrationStage] = []
+}
+
+struct FlashCardsVersionedSchema: VersionedSchema {
+    static let models: [any PersistentModel.Type] = [Card.self]
+    static let versionIdentifier: Schema.Version = .init(1, 0, 0)
 }

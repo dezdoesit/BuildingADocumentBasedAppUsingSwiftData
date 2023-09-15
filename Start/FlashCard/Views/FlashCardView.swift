@@ -24,9 +24,8 @@ struct FlashCardView: View {
                 ZStack {
                     CardReaderView(color: .cardFront, text: card.front)
                         .horizontalFlip(front, visible: !flipped)
-                    CardReaderView(color: .cardBack, text: card.back)
+                    CardReaderView(color: .cardBack, text: card.back, displaysCode: true)
                         .horizontalFlip(back, visible: flipped)
-                        .fontDesign(.monospaced)
                 }
                 #if !os(tvOS)
                 Spacer(minLength: 0)

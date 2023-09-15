@@ -20,7 +20,7 @@ struct ContentView: View {
                 withAnimation { navigationPath.append(card) }
             } addCard: {
                 let newCard = Card(front: "Sample Front", back: "Sample Back")
-                modelContext.insert(object: newCard)
+                modelContext.insert(newCard)
                 withAnimation {
                     editing = true
                     navigationPath.append(newCard)
@@ -34,6 +34,8 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .frame(minWidth: 500, minHeight: 500)
         .modelContainer(previewContainer)
+    #if os(macOS)
+        .frame(minWidth: 500, minHeight: 500)
+    #endif
 }

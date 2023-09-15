@@ -7,11 +7,12 @@ The container view for horizontal scrolling through the cards one by
 */
 
 import SwiftUI
+import SwiftData
 
 struct CardCarousel: View {
-    @State private var selectedCardID: Card.ID?
-    @FocusState private var focusCardID: Card.ID?
-    private let initialCardID: Card.ID
+    @State private var selectedCardID: PersistentIdentifier?
+    @FocusState private var focusCardID: PersistentIdentifier?
+    private let initialCardID: PersistentIdentifier
 
     let editing: Bool
     var cards: [Card]

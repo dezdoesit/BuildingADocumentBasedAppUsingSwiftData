@@ -10,6 +10,8 @@ import SwiftUI
 struct CardReaderView: View {
     let color: Color
     let text: String
+    var displaysCode: Bool = false
+
     var body: some View {
         CardContainerView {
             Text(text)
@@ -17,6 +19,7 @@ struct CardReaderView: View {
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.33)
                 .padding()
+                .fontDesign(displaysCode ? .monospaced : .default)
         }
         .backgroundStyle(color)
     }
