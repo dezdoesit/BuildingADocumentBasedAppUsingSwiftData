@@ -80,6 +80,7 @@
 		371BAA6329EFAB1A00011A7C /* FlashCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlashCard.entitlements; sourceTree = "<group>"; };
 		371BAA7629EFB2DB00011A7C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		42DF4E4F0B5CF2D4172DCE3B /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4C3F3E9F2BFAAEFD0085AAF6 /* SwiftDataFlashCardSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftDataFlashCardSample-Info.plist"; sourceTree = "<group>"; };
 		696D18A129FB594D003F6D01 /* CardContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
 		696D18A229FB594D003F6D01 /* CardGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardGallery.swift; sourceTree = "<group>"; };
 		696D18A329FB594D003F6D01 /* CardReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardReaderView.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		371BAA5129EFAB1900011A7C = {
 			isa = PBXGroup;
 			children = (
+				4C3F3E9F2BFAAEFD0085AAF6 /* SwiftDataFlashCardSample-Info.plist */,
 				05EB0E8B05EE4F38F8CDA5DB /* README.md */,
 				371BAA5C29EFAB1900011A7C /* FlashCard */,
 				371BAA5B29EFAB1900011A7C /* Products */,
@@ -615,6 +617,8 @@
 				DEVELOPMENT_TEAM = ZB5WA6672J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftDataFlashCardSample-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -654,6 +658,8 @@
 				DEVELOPMENT_TEAM = ZB5WA6672J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftDataFlashCardSample-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
