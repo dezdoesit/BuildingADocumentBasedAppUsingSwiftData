@@ -6,6 +6,7 @@ The main entry for the app.
 */
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftDataFlashCardSample: App {
@@ -13,5 +14,6 @@ struct SwiftDataFlashCardSample: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Card.self)
     }
 }

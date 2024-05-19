@@ -6,11 +6,13 @@ The main view that contains the majority of the app's content.
 */
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
-    @State private var cards: [Card] = SampleDeck.contents
+    @Query private var cards: [Card]
     @State private var editing = false
     @State private var navigationPath: [Card] = []
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
@@ -18,6 +20,7 @@ struct ContentView: View {
                 withAnimation { navigationPath.append(card) }
             } addCard: {
                 let newCard = Card(front: "Sample Front", back: "Sample Back")
+                modelContext.insert(newCard)
                 // save card
                 withAnimation {
                     navigationPath.append(newCard)
@@ -33,4 +36,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .frame(minWidth: 500, minHeight: 500)
+        .modelContainer(previewContainer)
 }
